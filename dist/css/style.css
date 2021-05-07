@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  background: url("../images/bg-mobile.png") no-repeat center center/cover;
+  color: #dddbff;
+}
+.container .boxes {
+  padding: 0 25px;
+  width: 100%;
+}
+.container .first,
+.container .second {
+  background-color: #1d2c67;
+  padding: 40px;
+}
+.container .first {
+  border-radius: 10px 100px 10px 10px;
+}
+.container .first .icons {
+  display: flex;
+  justify-content: flex-start;
+}
+.container .first .icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  min-width: 40px;
+  margin: 30px 15px 0 0;
+  border-radius: 10px;
+  background-color: #0c122c;
+}
+.container .second {
+  margin-top: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+.container .second .used {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.container .second .used span {
+  font-weight: 700;
+}
+.container .second .usage-bar-back {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  background-color: #15204c;
+}
+.container .second .usage-bar-back .usage-bar-used {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 70%;
+  height: 14px;
+  margin-left: 3px;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 100px;
+}
+.container .second .usage-bar-back .usage-bar-used .usage-bar-marker {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 2px;
+}
+.container .second .usage-scale {
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.container .second .notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 156px;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 78px);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.container .second .notice span {
+  display: flex;
+  align-items: center;
+  color: #848794;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.container .second .notice span .heavy {
+  color: #0c122c;
+  font-size: 32px;
+  margin-right: 7px;
+  letter-spacing: 0;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  text-align: center;
+  height: 5vh;
+  background-color: #283d8f;
+  color: black;
+}
+.attribution a {
+  color: #596dc0;
+}
+
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  .container {
+    height: auto;
+  }
+  .container .boxes {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 568px) {
+  .boxes {
+    max-width: 60vw;
+  }
+
+  .attribution {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 850px) {
+  .container {
+    height: calc(100vh - 50px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    background: url("../images/bg-desktop.png") no-repeat center top 50vh/100vw 50vh;
+    background-color: #0c122c;
+  }
+  .container .boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 70vw;
+  }
+  .container .boxes .first {
+    width: 35%;
+  }
+  .container .boxes .second {
+    width: 62%;
+    height: 155px;
+  }
+  .container .boxes .second .usage .used {
+    text-align: left;
+  }
+  .container .boxes .notice {
+    position: absolute;
+    top: -40px;
+    right: 40px;
+    left: auto;
+    border-bottom-right-radius: 0;
+  }
+  .container .boxes .notice::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    height: 0;
+    width: 0;
+    border-top: 10px solid #fff;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+}/*# sourceMappingURL=style.css.map */
